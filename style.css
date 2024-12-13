@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&family=Bungee+Tint&family=Cairo:wght@200..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Itim&family=Jomhuria&family=Marko+One&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Young+Serif&display=swap');
+
+:root {
+    --nav-color: #111111;
+    --nav-hover-color: #333333;
+    --dark: #292929;
+    --gray-hover: #444444;
+    --red: #ff4655;
+    --nav-text-hover: #ff4a59;
+    --gray: #c3c3c3;
+    --border: #ece8e1;
+    --button: #0f1923;
+}
+
+@font-face {
+    font-family: Tungsten;
+    src: url(styles/webfonts/TungstenNarrow-Black.otf);
+}
+
+body {
+    font-size: 14px;
+    font-family: "Itim", cursive;
+    height: 10000px;
+}
+
+.main-btn {
+    font-size: 18px;
+    text-decoration: none;
+    background-color: var(--button);
+    transition: .3s;
+}
+
+.main-btn:hover {
+    color: var(--button) !important;
+    background-color: var(--border);
+}
+
+/* start navbar */
+.navbar {
+    background-color: var(--nav-color);
+    height: 80px;
+    padding: 0;
+}
+
+.riot-logo:hover svg {
+    fill: #eb0029;
+}
+
+.navbar-brand {
+    width: 180px;
+}
+
+
+.nav-link {
+    padding: 0.3rem 1.5rem;
+    border-radius: 7px;
+}
+
+.nav-link:hover {
+    background-color: var(--nav-hover-color);
+    color: var(--nav-text-hover) !important;
+}
+
+.nav-link:hover .menu path {
+    fill: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--dark);
+    min-width: 200px;
+    height: 195px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    bottom: -180px;
+    border-top: 3px solid var(--red);
+    border-radius: 2px;
+    padding: 20px;
+
+}
+
+.dropdown-content a {
+    color: #c3c3c3;
+    padding: 7px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--gray-hover);
+    color: white;
+}
+
+.nav-item:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.search {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #2b2a29;
+}
+
+.lang:hover {
+    border-radius: 10px;
+    background-color: #2b2a29;
+}
+
+.play a {
+    color: var(--nav-color);
+    border-radius: 15px;
+    background-color: #ff6259;
+}
+
+.play a:hover {
+    background-color: #ff6259 !important;
+    color: var(--red);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media (min-width:992px) and (max-width:1360px) {
+    .nav-item {
+        display: none;
+    }
+}
+
+@media (max-width: 350px) {
+    .navbar-brand {
+        width: fit-content;
+        margin: 0;
+    }
+}
+
+/* end navbar */
+
+/* start landing */
+
+.landing {
+    width: 100%;
+    height: 640px;
+}
+
+.landing video {
+    object-fit: cover;
+    z-index: -1;
+}
+
+.landing .landing-container {
+    z-index: 1;
+    flex-direction: column;
+}
+
+.landing::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: .1;
+}
+
+.secondary-btn {
+    background-color: var(--red);
+    border-radius: 0;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    transition: .3s;
+}
+
+.button-container {
+    border: 1px solid var(--border);
+}
+
+.button-container a:hover {
+    color: var(--dark) !important;
+    background-color: var(--border);
+}
+
+@media (max-width: 400px) {
+    .landing-container {
+        font-size: 16px !important;
+    }
+
+    .landing-container img {
+        width: 85%;
+    }
+}
+
+/* end landing */
+
+/* start updates */
+.updates {
+    font-family: Tungsten;
+    background-color: var(--border);
+}
+
+.updates .row .news h1 {
+    font-size: 40px;
+}
+
+.updates .row .news div {
+    font-size: 16px;
+    font-family: "Itim", cursive;
+}
+
+.news {
+    justify-content: space-between;
+}
+
+.card-text span {
+    color: var(--red);
+}
+
+@media (max-width: 450px) {
+    .updates .row .news h1 {
+        font-size: 30px;
+    }
+}
+
+/* end updates */
+
+/* start act */
+.act {
+    height: 640px;
+}
+
+.act img {
+    object-fit: cover;
+}
+
+.text-overlay {
+    margin-left: 150px;
+}
+
+.collision h1 {
+    font-size: 170px;
+    font-family: Tungsten;
+}
+
+.collision p {
+    font-size: 20px;
+}
+
+@media (max-width:1350px) {
+    .collision h1 {
+        font-size: 80px;
+    }
+
+    .text-overlay {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width:600px) {
+    .collision {
+        width: 100%;
+    }
+
+    .collision .main-btn {
+        width: 100% !important;
+    }
+
+    .collision p {
+        font-size: 16px;
+    }
+}
+
+/* end act */
