@@ -17,6 +17,11 @@
     src: url(styles/webfonts/TungstenNarrow-Black.otf);
 }
 
+@font-face {
+    font-family: Tungsten-semi-bold;
+    src: url(styles/webfonts/Tungsten-Semibold.ttf);
+}
+
 body {
     font-size: 14px;
     font-family: "Itim", cursive;
@@ -33,6 +38,18 @@ body {
 .main-btn:hover {
     color: var(--button) !important;
     background-color: var(--border);
+}
+
+.main-body-btn {
+    font-size: 18px;
+    text-decoration: none;
+    background-color: var(--red);
+    transition: .3s;
+}
+
+.main-body-btn:hover {
+    color: var(--border) !important;
+    background-color: var(--button);
 }
 
 /* start navbar */
@@ -125,7 +142,22 @@ body {
     box-shadow: none;
 }
 
-@media (min-width:992px) and (max-width:1360px) {
+.hovered:hover::before {
+    opacity: 1;
+}
+
+.hovered::before {
+    content: "";
+    width: 100%;
+    height: 15%;
+    background-color: var(--red);
+    position: absolute;
+    bottom: -15px;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+@media (min-width:992px) and (max-width:1375px) {
     .nav-item {
         display: none;
     }
@@ -153,7 +185,6 @@ body {
 }
 
 .landing .landing-container {
-    z-index: 1;
     flex-direction: column;
 }
 
@@ -241,17 +272,18 @@ body {
 }
 
 .collision h1 {
-    font-size: 170px;
+    font-size: 150px;
     font-family: Tungsten;
 }
 
 .collision p {
-    font-size: 20px;
+    font-size: 19px;
 }
 
 @media (max-width:1350px) {
     .collision h1 {
-        font-size: 80px;
+        font-size: 80px !important;
+        width: 100% !important;
     }
 
     .text-overlay {
@@ -274,3 +306,164 @@ body {
 }
 
 /* end act */
+
+/* start we-are */
+/* .we-are .collision h1 {
+    line-height: .9;
+    font-size: 150px;
+    width: 54%;
+}
+
+.we-are .text-overlay {
+    width: 44%;
+} */
+
+.we-are .container,
+.agent .container {
+    max-width: none;
+}
+
+
+.we-are img {
+    height: 700px !important;
+}
+
+.we-are .row {
+    justify-content: space-between;
+}
+
+.we-are .collision h1 {
+    max-width: 600px;
+}
+
+.we-are .collision p {
+    max-width: 750px;
+}
+
+.we-are .collision a {
+    width: 40% !important;
+}
+
+@media (min-width: 991px) and (max-width: 1351px) {
+
+    .we-are .collision p,
+    .agent .collision p {
+        font-size: 16px;
+    }
+
+    .we-are img {
+        height: 600px !important;
+    }
+
+    .we-are .collision,
+    .agent .collision {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+}
+
+@media (min-width:1351px) {
+
+    .we-are .test {
+        justify-content: flex-start !important;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .we-are .test {
+        height: 50% !important;
+        justify-content: flex-start !important;
+    }
+
+    .we-are .test video {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+
+    .we-are img,
+    .agent img {
+        height: 950px !important;
+    }
+
+    .we-are .collision p,
+    .agent .collision p {
+        max-width: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .we-are .collision a,
+    .agent .collision a {
+        width: 100% !important;
+    }
+
+    .we-are .collision,
+    .agent .collision {
+        padding-left: 1rem !important;
+    }
+
+    .we-are .test video,
+    .agent .test img {
+        object-fit: contain;
+    }
+
+}
+
+/* end we-are */
+
+/* start agent */
+.agent .test {
+    height: calc(100% - 3rem) !important;
+}
+
+.agent .collision {
+    width: 40%;
+}
+
+.agent .collision p {
+    width: 80% !important;
+}
+
+.agent .container {
+    z-index: 1;
+}
+
+@media (max-width: 991px) {
+    .agent .row {
+        flex-direction: row !important;
+    }
+
+    .agent .collision {
+        width: 100% !important;
+        height: 50% !important;
+        justify-content: flex-start !important;
+    }
+
+    .agent .collision p {
+        font-size: 16px !important;
+    }
+
+    .agent .test {
+        height: 100% !important;
+        max-height: 610px !important;
+    }
+
+    .agent .test img {
+        width: 65% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 991px) {
+    .agent .collision {
+        height: 35% !important;
+    }
+}
+
+/* end agent */
