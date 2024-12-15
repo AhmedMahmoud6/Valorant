@@ -25,10 +25,10 @@
 body {
     font-size: 14px;
     font-family: "Itim", cursive;
-    height: 10000px;
 }
 
 .main-btn {
+    width: 200px !important;
     font-size: 18px;
     text-decoration: none;
     background-color: var(--button);
@@ -41,6 +41,7 @@ body {
 }
 
 .main-body-btn {
+    width: 200px !important;
     font-size: 18px;
     text-decoration: none;
     background-color: var(--red);
@@ -272,12 +273,17 @@ body {
 }
 
 .collision h1 {
-    font-size: 150px;
+    font-size: 140px;
     font-family: Tungsten;
 }
 
 .collision p {
     font-size: 19px;
+}
+
+.act .container {
+    padding-bottom: 40px;
+    align-items: flex-end !important;
 }
 
 @media (max-width:1350px) {
@@ -308,16 +314,6 @@ body {
 /* end act */
 
 /* start we-are */
-/* .we-are .collision h1 {
-    line-height: .9;
-    font-size: 150px;
-    width: 54%;
-}
-
-.we-are .text-overlay {
-    width: 44%;
-} */
-
 .we-are .container,
 .agent .container {
     max-width: none;
@@ -338,10 +334,6 @@ body {
 
 .we-are .collision p {
     max-width: 750px;
-}
-
-.we-are .collision a {
-    width: 40% !important;
 }
 
 @media (min-width: 991px) and (max-width: 1351px) {
@@ -433,6 +425,10 @@ body {
     z-index: 1;
 }
 
+.agent .test img {
+    max-height: 560px;
+}
+
 @media (max-width: 991px) {
     .agent .row {
         flex-direction: row !important;
@@ -467,3 +463,74 @@ body {
 }
 
 /* end agent */
+
+/* start map */
+
+@media (max-width: 991px) {
+    .map .test img {
+        width: 85% !important;
+    }
+
+    .map {
+        height: auto;
+    }
+
+    .map .test {
+        height: 50% !important;
+    }
+
+    .map .collision {
+        height: 46% !important;
+    }
+}
+
+/* end map */
+
+/* start download */
+.hoverable-link:hover {
+    background-color: var(--gray-hover);
+}
+
+.download {
+    background-color: var(--dark);
+}
+
+/* end download */
+
+/* start footer */
+.footer {
+    background-color: var(--nav-color);
+}
+
+.footer ul svg {
+    color: white;
+    font-size: 16px;
+}
+
+.footer .icons ul li,
+.footer .rates ul li {
+    background-color: var(--dark);
+    border-radius: 10px;
+}
+
+.footer .riot-icon svg:hover {
+    fill: white;
+}
+
+.copyright p {
+    max-width: 650px;
+}
+
+@media (max-width:991px) {
+    .copyright p {
+        width: 100% !important;
+    }
+}
+
+@media (max-width:575px) {
+    .footer .rates ul {
+        gap: 10px;
+    }
+}
+
+/* end footer */
