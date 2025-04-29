@@ -1,6 +1,6 @@
 # 🎯 **Valorant Project**
 
-Welcome to the **Valorant** repository! This is a simple project that showcases a basic webpage layout built using **HTML** and **CSS**. It could serve as a foundational template for creating web pages or Valorant-themed web interfaces.
+This is a simple project that showcases a basic webpage layout built using **HTML** and **CSS**. It could serve as a foundational template for creating web pages or Valorant-themed web interfaces.
 
 ---
 
